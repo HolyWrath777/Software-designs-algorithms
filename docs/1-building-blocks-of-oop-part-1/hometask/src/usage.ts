@@ -1,4 +1,10 @@
 // Create the inventory
+import { Pizza } from "./Pizza";
+import { Item } from "./Item";
+import { ItemWeightComparator } from "./ItemWeightComparator";
+import { Sword } from "./Sword";
+import { Inventory } from "./Inventory";
+
 const inventory: Inventory = new Inventory();
 
 // Create a set of items
@@ -23,7 +29,7 @@ inventory.sort();
 console.log(inventory.toString());
 
 // Sort by weight
-inventory.sort(new ItemWeightComparator());
+inventory.sortItems(new ItemWeightComparator());
 
 // Display the inventory again
 console.log(inventory.toString());
